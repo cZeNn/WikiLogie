@@ -17,12 +17,12 @@ body.dark-mode td h4{
   color:white;
 }
 body.dark-mode td{
-  background-image: url("../Style/images/Marbre-Hades.jpg");
+  background-image: url("./Style/images/Marbre-Hades.jpg");
   background-size: cover;
   border-color: white;
 }
 body.dark-mode td:hover{
-  background-image: url("../Style/images/687d6735e6598303c2b8c9037ffba026.jpg");
+  background-image: url("./Style/images/687d6735e6598303c2b8c9037ffba026.jpg");
   background-size: cover;
 }
 body.dark-mode .Text{
@@ -75,7 +75,7 @@ body.dark-mode .toggle::before{
 }
 body.dark-mode header{
   border: 5px solid #660019;
-  background-image: url("../Style/images/Hades.png");
+  background-image: url("./Style/images/Hades.png");
 }
 
 header {
@@ -88,7 +88,7 @@ header {
   top: 0;
   width: 300px; /* Largeur fixe */
   height: 100%;
-  background-image: url("../Style/images/Zeus.png");
+  background-image: url("./Style/images/Zeus.png");
   background-size: cover;
   display: block;
   flex-direction: column; /* Organisation verticale */
@@ -244,7 +244,7 @@ table {
   table-layout: fixed;
 }
 td {
-  background-image: url("../Style/images/Marbre-Divin.jpg");
+  background-image: url("./Style/images/Marbre-Divin.jpg");
   background-size: cover;
   width: 33.33%; /* Assure une largeur égale pour chaque case */
   height: 150px; /* Hauteur fixe pour uniformiser les tailles */
@@ -262,7 +262,7 @@ td h4 {
 td:hover {
   color:black;
   background-color: whitesmoke;
-  background-image: url("../Style/images/Zeus_Le_Dieu_supreme.png");
+  background-image: url("./Style/images/Zeus_Le_Dieu_supreme.png");
   background-size: cover;
   transform: scale(1.165);
 }
