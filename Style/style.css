@@ -1,0 +1,430 @@
+body {
+  margin: 0;
+  height: 100dvh;
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  background-color: white;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+body.dark-mode b{
+  color: #7A001F;
+}
+body.dark-mode td h4{
+  color:white;
+}
+body.dark-mode td{
+  background-image: url("../Style/images/Marbre-Hades.jpg");
+  background-size: cover;
+  border-color: white;
+}
+body.dark-mode td:hover{
+  background-image: url("../Style/images/687d6735e6598303c2b8c9037ffba026.jpg");
+  background-size: cover;
+}
+body.dark-mode .Text{
+  background-color: #363636;
+}
+body.dark-mode .back-to-top{
+  background-color: #7A001F;
+}
+body.dark-mode .search-bar input{
+  border-color: #7A001F;
+}
+body.dark-mode .SearchBtn{
+  background-color: #7A001F;
+  border-color: white;
+}
+body.dark-mode .search-bar input:focus {
+  box-shadow: 0 0 25px white;
+}
+body.dark-mode footer{
+  background-color: #363636;
+}
+body.dark-mode .credits{
+  border-top: 3px solid #7A001F;
+  border-bottom: 3px solid #7A001F;
+}
+body.dark-mode .card{
+  background-color: gray;
+}
+body.dark-mode .card h3{
+  color: #7A001F;
+}
+body.dark-mode .card p.bottom{
+  color: white;
+  background-color: gray;
+}
+body.dark-mode .L{
+  color: white;
+}
+body.dark-mode .menu-btn{
+  background-color: #7A001F;
+}
+body.dark-mode .menu-content ul li a:hover{
+  background-color: #7A001F;
+}
+body.dark-mode .toggle{
+  background-color: gray;
+}
+body.dark-mode .toggle::before{
+  background-color: #7A001F;
+}
+body.dark-mode header{
+  border: 5px solid #660019;
+  background-image: url("../Style/images/Hades.png");
+}
+
+header {
+  border-radius: 20px;
+  border: 5px solid #d6b982;
+  position: fixed;
+  margin-top: 0.2%;
+  margin-left: 0.2%;
+  left: 0;
+  top: 0;
+  width: 300px; /* Largeur fixe */
+  height: 100%;
+  background-image: url("../Style/images/Zeus.png");
+  background-size: cover;
+  display: block;
+  flex-direction: column; /* Organisation verticale */
+  align-items: center; /* Centrage des éléments */
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%; /* Prend toute la largeur du header */
+}
+header nav ul li {
+  padding: 0;
+  margin-bottom: 4%;
+  text-align: center;
+  width: 100%;
+}
+header nav ul li .Chp{
+  margin-left: 24%;
+  width: 50%;
+  color: white;
+  border: 3px solid white;
+  font-weight: bold;
+  display: block;
+}
+header nav ul li:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* Pour éviter que le contenu principal soit caché derrière le header */
+.Main {
+  margin-left: 300px; /* Décaler le contenu principal vers la droite */
+} 
+.Main p {
+  font-size: clamp(1.2rem, calc(4vw + 1rem), 1.7rem);
+  background-color: rgb(255, 244, 237);
+}
+/* Conteneur du bouton */
+.toggle {
+  margin-left: 32%;
+  background-color: white;
+  display: flex;
+  width: 100px;
+  border-radius: 20px;
+  border: 3px solid white;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+/* Parties Clair / Sombre */
+.toggle div {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+}
+/* Fond animé */
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #d6b982;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+/* Classe pour le mode sombre */
+.dark-mode::before {
+  transform: translateX(100%);
+}
+
+
+/* Menu des langues (restant identique) */
+.language-menu {
+  position: relative;
+  display: inline-block;
+}
+.menu-btn {
+  max-width: 100px;
+  color: white;
+  background-color: #d6b982;
+  padding: 7px 10px 10px 7px;
+  font-size: 20px;
+  border: 3px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.L{
+  font-style: normal;
+  color: white;
+  text-decoration: underline;
+}
+.menu-btn-v2 {
+  background-color: white;
+  border: none;
+}
+.menu-content {
+  display: none;
+  text-align: center;
+  position: absolute;
+  background-color: white;
+  min-width: 135px;
+  padding: 4%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+  z-index: 1;
+}
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 3px;
+}
+.menu-content ul li a {
+  text-decoration: none;
+  background-color: white;
+  padding: 3%;
+  color: black;
+  display: block;
+  border-radius: 50px;
+  border: 2px solid gray;
+}
+.menu-content ul li a:hover {
+  border: none;
+  background-color: #d6b982;
+  color: white;
+  transform: scale(1.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.language-menu:hover .menu-content {
+  display: block;
+}
+.Frr, .Enn, .Itt, .Ess{
+  font-size: 20px;
+}
+
+h1, h2 {
+  padding: min(0.5em, 5%);
+  margin-left: 3%;
+  margin-right: 45%;
+}
+
+table {
+  max-width: 95%;
+  margin-left: 7%;
+  margin-right: 7%;
+  border: none;
+  table-layout: fixed;
+}
+td {
+  background-image: url("../Style/images/Marbre-Divin.jpg");
+  background-size: cover;
+  width: 33.33%; /* Assure une largeur égale pour chaque case */
+  height: 150px; /* Hauteur fixe pour uniformiser les tailles */
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: center;
+  border: solid 4px black;
+  border-radius: 14px;
+}
+td h4 {
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+}
+td:hover {
+  color:black;
+  background-color: whitesmoke;
+  background-image: url("../Style/images/Zeus_Le_Dieu_supreme.png");
+  background-size: cover;
+  transform: scale(1.165);
+}
+
+.Text {
+  background-color: whitesmoke;
+  border-radius: 30px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+  margin-left: 7%;
+  margin-right: 7%;
+  text-align: center;
+  flex-shrink: 0; /* Empêcher les cartes de rétrécir */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+b {
+  font-style: italic;
+  color: #d6b982;
+}
+
+h1 {
+  font-style: italic;
+  text-align: left;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+h2{
+  text-align: left;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+/* Bouton retour en haut */
+.back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 15px;
+  background-color: #d6b982;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 2.05em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.back-to-top:hover {
+  transform: scale(1.27);
+}
+
+/* Barre de recherche */
+.search-bar {
+  position: fixed;
+  top: 30px;
+  right: 15px;
+  align-items: right;
+  max-width: 450px;
+}
+.search-bar input {
+  border: 4px solid #d6b982;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  border-radius: 15px;
+  outline: none;
+}
+.search-bar input:focus {
+  border-color: #800020;
+  box-shadow: 0 0 5px #4C062D;
+}
+
+.search-bar .SearchBtn {
+  background-color: bisque;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid black;
+}
+.search-bar .SearchBtn:focus {
+  border-color: #800020;
+  box-shadow: 0 0 5px #4C062D;
+}
+.search-bar .SearchBtn:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  padding: 25px;
+  bottom: 0;
+  max-width: 100%;
+}
+
+.credits {
+  display: flex;
+  justify-content: center; /* Centrer les cartes horizontalement */
+  align-items: center; /* Centrer les cartes verticalement */
+  border-top: 3px solid #d6b982;
+  border-bottom: 3px solid #d6b982;
+  overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+} 
+.card {
+  background-color: rgb(235, 235, 235);
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  max-height: 400px;
+  margin: 20px;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  padding: 25px;
+  text-align: center;
+  flex-shrink: 0; /* Empêcher les cartes de rétrécir */
+}
+.card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1.1);
+}
+.card img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.card img:hover{
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 1.12);
+}
+.card h3 {
+  margin: 0;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d6b982;
+}
+.card p.bottom {
+  font-style: italic;
+  font-size: 17px;
+  font-weight: bold;
+  color: #666;
+  background-color: white;
+}
+
+
+
